@@ -1,6 +1,9 @@
-import { Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
+import ReadScreen from "./components/ReadScreen";
+import CreateScreen from "./components/CreateScreen";
+import DeleteScreen from "./components/DeleteScreen";
+import UpdateScreen from "./components/UpdateScreen";
 
 const Tab = createMaterialTopTabNavigator();
 

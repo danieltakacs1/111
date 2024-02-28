@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { FlatList, Pressable, StyleSheet, Text, View } from 'react-native';
 
-export default function App() {
+export default function AppEredeti() {
   const host = "http://localhost:8000/"
   const endpoint = "jarmuvek"
   const url = host + endpoint

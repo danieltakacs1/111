@@ -1,10 +1,31 @@
-import { StyleSheet, Text, View } from "react-native-web"
+import { Pressable } from "react-native";
+import { FlatList, StyleSheet, Text, View } from "react-native-web"
 
 
-export default function App() {
+export default function ReadScreen() {
+
+    function getCars() {
+        fetch(url)
+        .then(response => response.json())
+        .then(result => {      
+          console.log(result)
+          setJarmuvek(result)
+        })
+      }
+
     return (
         <View style={styles.container}>
             <Text>Járművek listája</Text>
+            <Pressable onPress={getCars}>
+                <Text>Lekér</Text>
+            </Pressable>
+            <FlatList data={jarmuvek}
+            rednerItem={({item}) => (
+                <View>
+                    <Text>{item.rendszam} {item.ar} ETC</Text>
+                </View>
+            )}
+            />
         </View>
     );
 }
